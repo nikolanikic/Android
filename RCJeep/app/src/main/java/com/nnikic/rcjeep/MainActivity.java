@@ -1,5 +1,6 @@
 package com.nnikic.rcjeep;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -33,9 +35,12 @@ public class MainActivity extends AppCompatActivity {
         final Random r = new Random();
         final TextView text = (TextView) findViewById(R.id.textViewZmija);
         final Button button = (Button) findViewById(R.id.buttonChangeColor);
+        final SeekBar seekBar = (SeekBar) findViewById(R.id.sk);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 text.setTextSize(r.nextInt(80 - 20) + 65);
+                int randomColor = Color.rgb(r.nextInt(255), r.nextInt(255), r.nextInt(255));
+                text.setTextColor(randomColor);
             }
         });
     }
