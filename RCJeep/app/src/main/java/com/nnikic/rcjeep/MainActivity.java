@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         final Random r = new Random();
         final TextView text = (TextView) findViewById(R.id.textViewZmija);
         final Button button = (Button) findViewById(R.id.buttonChangeColor);
-        final SeekBar seekBar = (SeekBar) findViewById(R.id.sk);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 text.setTextSize(r.nextInt(80 - 20) + 65);
