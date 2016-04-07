@@ -42,7 +42,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_name_change" />
+
+
+
         </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nexActBtn"
+            android:id="@+id/secondButton"
+            android:layout_gravity="bottom"
+            />
 
     </LinearLayout>
 </RelativeLayout>

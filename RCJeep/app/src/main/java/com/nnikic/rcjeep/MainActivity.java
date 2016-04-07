@@ -1,5 +1,6 @@
 package com.nnikic.rcjeep;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -34,12 +35,19 @@ public class MainActivity extends AppCompatActivity {
         });
         final Random r = new Random();
         final TextView text = (TextView) findViewById(R.id.textView_1);
-        final Button button = (Button) findViewById(R.id.buttonChangeColor);
-        button.setOnClickListener(new View.OnClickListener() {
+        final Button buttonText = (Button) findViewById(R.id.buttonChangeColor);
+        final Button buttonNextActivity = (Button) findViewById(R.id.secondButton);
+        buttonText.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 text.setTextSize(r.nextInt(80 - 20) + 65);
                 int randomColor = Color.rgb(r.nextInt(255), r.nextInt(255), r.nextInt(255));
                 text.setTextColor(randomColor);
+            }
+        });
+        buttonNextActivity.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent secondIntent = new Intent("android.intent.action.SECOND");
+                startActivity(secondIntent);
             }
         });
     }
