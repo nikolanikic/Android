@@ -2,8 +2,10 @@ package com.nnikic.rcjeep;
 
 import android.app.Activity;
 import android.content.Context;
-import android.hardware.*;
 import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -45,16 +47,7 @@ public class SecondActivity extends Activity implements SensorEventListener {
         float x = event.values[0];
         float y = event.values[1];
         float z = event.values[2];
-        float sumX = 0, sumY = 0, sumZ = 0;
 
-        while (true) {
-
-            for (int i = 0; i < 10; i++) {
-
-            }
-
-
-        }
 
     }
 
